@@ -13,7 +13,7 @@ export const fetchArticles = createAsyncThunk('articles/fetchArticles', async (_
     const offsetLimit = limit * ((thunkAPI.getState() as RootState).articleReducer.page - 1)
     const result = await BlogAPI.fetchArticles(limit, offsetLimit, tag)
     return result.data
-  } catch (e) {
+  } catch (e:any) {
     return thunkAPI.rejectWithValue(prepareFetchError(e))
   }
 })
@@ -23,7 +23,7 @@ export const fetchArticleBySlug = createAsyncThunk('articles/fetchArticleBySlug'
     thunkAPI.dispatch(articleSlice.actions.clearArticlePage())
     const result = await BlogAPI.fetchArticleBySlug(slug)
     return result.data.article
-  } catch (e) {
+  } catch (e:any) {
     return thunkAPI.rejectWithValue(prepareFetchError(e))
   }
 })
@@ -50,7 +50,7 @@ export const createArticle = createAsyncThunk(
       }
       const result = await BlogAPI.createArticle(data)
       return result.data.article as IArticle
-    } catch (e) {
+    } catch (e:any) {
       return thunkAPI.rejectWithValue(prepareFetchError(e))
     }
   }
@@ -81,7 +81,7 @@ export const updateArticle = createAsyncThunk(
       }
       const result = await BlogAPI.updateArticle(data, fetchData.slug)
       return result.data.article as IArticle
-    } catch (e) {
+    } catch (e:any) {
       return thunkAPI.rejectWithValue(prepareFetchError(e))
     }
   }
@@ -90,7 +90,7 @@ export const deleteArticle = createAsyncThunk('articles/delete', async (slug: st
   try {
     const result = await BlogAPI.deleteArticle(slug)
     return result.data.article as IArticle
-  } catch (e) {
+  } catch (e:any) {
     return thunkAPI.rejectWithValue(prepareFetchError(e))
   }
 })
@@ -99,7 +99,7 @@ export const likeArticle = createAsyncThunk('articles/like', async (slug: string
   try {
     const result = await BlogAPI.likeArticle(slug)
     return result.data.article as IArticle
-  } catch (e) {
+  } catch (e:any) {
     return thunkAPI.rejectWithValue(prepareFetchError(e))
   }
 })
@@ -108,7 +108,7 @@ export const unlikeArticle = createAsyncThunk('articles/unlike', async (slug: st
   try {
     const result = await BlogAPI.unLikeArticle(slug)
     return result.data.article as IArticle
-  } catch (e) {
+  } catch (e:any) {
     return thunkAPI.rejectWithValue(prepareFetchError(e))
   }
 })
