@@ -1,0 +1,35 @@
+@import '../../style/includes';
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  &__label {
+    font-size: 0.875rem;
+    color: $form-text-color;
+    margin-bottom: 5px;
+  }
+
+  &__field {
+    padding: 8px 12px;
+    border-radius: $border-radius;
+    border: 1px solid $form-border-color;
+    height: 168px;
+    resize: none;
+
+    &-error {
+      border: 1px solid $error-color;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+      font-size: 1rem;
+    }
+  }
+
+  &__error {
+    color: $error-color;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../style/includes';
+
+.checkbox {
+  input {
+    display: none;
+
+    &:checked {
+      & + .checkbox__label {
+        &:before {
+          background: $info-color;
+        }
+
+        &:after {
+          background: url('./check.svg') no-repeat 70% 50%;
+        }
+      }
+    }
+  }
+
+  &__label {
+    margin-left: 24px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      position: absolute;
+      left: -24px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      content: '';
+    }
+
+    &:before {
+      border-radius: 2px;
+      border: 1px solid $info-color;
+    }
+  }
+}

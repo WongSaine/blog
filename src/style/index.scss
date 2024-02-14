@@ -1,0 +1,53 @@
+@import 'includes';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: $heading-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border-top: 1px solid $delimiter-color;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.content {
+  padding: 20px 0;
+  position: relative;
+}
+
+.flash-bar {
+  position: absolute;
+  top: 0;
+  right: -350px;
+  height: 100%;
+  //max-width: 350px;
+  padding: 20px 20px;
+}

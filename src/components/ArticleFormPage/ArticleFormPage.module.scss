@@ -1,0 +1,54 @@
+@import '../../style/includes';
+
+.article-page {
+  &__tags-label {
+    font-size: 0.875rem;
+    color: $form-text-color;
+    margin-bottom: 5px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag-row {
+    //width: 51%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__tag-input {
+    width: 300px;
+    margin-bottom: 0;
+    margin-right: 17px;
+  }
+
+  &__btn {
+    width: 120px;
+    padding: 12px 12px;
+    background-color: $white;
+    border-radius: $border-radius;
+    margin-right: 17px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &-delete {
+      color: $error-color;
+      border: 1px solid $error-color;
+    }
+
+    &-add {
+      color: $info-color;
+      border: 1px solid $info-color;
+    }
+  }
+}

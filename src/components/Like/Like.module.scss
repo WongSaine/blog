@@ -1,0 +1,36 @@
+@import '../../style/includes';
+
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__count {
+    margin-left: 5px;
+    font-size: 0.75rem;
+  }
+
+  &__heart {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__btn {
+    $self: &;
+    border: none;
+    outline: none;
+    background: url('/like.svg');
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+      cursor: pointer;
+      background: url('/active-like.svg');
+      opacity: 0.5;
+    }
+
+    &_active {
+      background: url('/active-like.svg');
+    }
+  }
+}
