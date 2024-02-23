@@ -1,16 +1,16 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 
-import Header from './components/Header'
+import Header from './components/widgets/Header'
 import { useAppSelector } from './hooks'
-import Spinner from './components/Spinner'
-import ArticleList from './components/ArticleList'
-import ArticlePage from './components/ArticlePage'
-import Login from './components/Login'
-import FlashMessage from './components/FlashMessage'
-import Registration from './components/Registration'
-import ProfilePage from './components/ProfilePage'
-import ArticleFormPage from './components/ArticleFormPage'
-import ErrorPage from './components/ErrorPage'
+import Spinner from './components/layouts/Spinner'
+import ArticleList from './components/widgets/ArticleList'
+import ArticlePage from './components/pages/ArticlePage'
+import Login from './components/pages/Login'
+import FlashMessage from './components/layouts/FlashMessage'
+import Registration from './components/pages/Registration'
+import ProfilePage from './components/pages/ProfilePage'
+import ArticleFormPage from './components/pages/ArticleFormPage'
+import ErrorPage from './components/pages/ErrorPage'
 
 function App() {
   const { isLoading, errors } = useAppSelector((state) => state.commonReducer)

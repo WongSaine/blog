@@ -1,0 +1,40 @@
+@import '../../../style/includes';
+
+.form {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__submit {
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: $info-color;
+    color: $white;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+
+    &:hover {
+      background: lighten($info-color, 10%);
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background: lighten($text-color-secondary, 70%);
+    }
+  }
+}

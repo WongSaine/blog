@@ -7,7 +7,7 @@ export const loadFromStorage = (key: string) => {
 }
 
 export const setToStorage = (key: string, data: any): void => {
-  localStorage.setItem(key, JSON.stringify(data))
+  localStorage.setItem(key, JSON.stringify(data.token));
 }
 
 export const clearStorage = (key: string) => localStorage.removeItem(key)

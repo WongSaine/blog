@@ -1,0 +1,106 @@
+@import '../../../style/includes';
+
+.article {
+  background-color: $white;
+  box-shadow: $shadow;
+  padding: 15px 16px 25px;
+  margin-bottom: 20px;
+  border-radius: $border-radius;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+  }
+
+  &__title-wrapper {
+    display: flex;
+  }
+
+  &__title {
+    margin-right: 13px;
+    color: $info-color;
+    font-size: 1.25rem;
+  }
+
+  &__description {
+    max-width: 682px;
+    font-size: 0.75rem;
+    color: $text-color-secondary;
+    //display: inline-block;
+  }
+
+  &__body {
+  }
+
+  &__author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__author-name {
+    font-size: 0.75rem;
+    color: $heading-color;
+  }
+
+  &__published-date {
+    font-size: 0.75rem;
+    color: $text-color-secondary;
+  }
+
+  &__author-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 12px;
+  }
+
+  &__author-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+
+  &__second-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__controls {
+    //display: inline-block;
+    margin-left: auto;
+  }
+
+  &__control-button {
+    padding: 10px 17px;
+    background: none;
+    border-radius: $border-radius;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    border: 1px solid;
+    margin-left: 20px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &-delete {
+      border-color: $error-color;
+      color: $error-color;
+    }
+
+    &-edit {
+      border-color: $success;
+      color: $success;
+    }
+  }
+}
